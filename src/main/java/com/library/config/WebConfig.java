@@ -18,7 +18,7 @@ public class WebConfig implements WebMvcConfigurer {
                         frontendUrl,
                         "http://localhost:5173",
                         "http://localhost:3000",
-                        "https://frontend-lib-drab.vercel.app"
+                        "https://frontend-lib-hardiksinghal896s-projects.vercel.app"
                 )
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
