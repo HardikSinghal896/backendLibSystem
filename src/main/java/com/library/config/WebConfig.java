@@ -8,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
 
-    @Value("${FRONTEND_URL:http://localhost:5173}")
+    @Value("${FRONTEND_URL:http://localhost:5173,https://frontend-lib-drab.vercel.app}")
     private String frontendUrl;
 
     @Override
@@ -17,8 +17,7 @@ public class WebConfig implements WebMvcConfigurer {
                 .allowedOrigins(
                         frontendUrl,
                         "http://localhost:5173",
-                        "http://localhost:3000",
-                        "http://192.168.29.73:5173/"
+                        "http://localhost:3000"
                 )
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
