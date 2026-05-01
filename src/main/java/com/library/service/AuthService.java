@@ -44,11 +44,11 @@ public class AuthService {
             throw new RuntimeException("Invalid email or password");
         }
 
-        if (!"APPROVED".equals(user.getStatus())) {
-            if ("PENDING".equals(user.getStatus()))
-                throw new RuntimeException("Account pending admin approval");
-            throw new RuntimeException("Account has been rejected by admin");
-        }
+//        if (!"APPROVED".equals(user.getStatus())) {
+//            if ("PENDING".equals(user.getStatus()))
+//                throw new RuntimeException("Account pending admin approval");
+//            throw new RuntimeException("Account has been rejected by admin");
+//        }
 
         String token = sessionStore.createSession(user.getId(), false);
         Map<String, Object> resp = new HashMap<>();
